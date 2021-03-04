@@ -61,10 +61,13 @@ const Nav = ({ links }) => {
             <StyledLink
               key={link.text}
               to={link.to}
-              padding="0 2.5em"
+              margin="0 2.4em"
+              padding="5px 2px"
               fontSize="1rem"
               color={COLORS.white}
               hover="grey"
+              otherCSS="border-bottom: 2px solid transparent"
+              hoverBorderBottom={`2px solid ${COLORS.orange}`}
             >
               {link.text}
             </StyledLink>

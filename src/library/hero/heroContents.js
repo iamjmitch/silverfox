@@ -39,7 +39,8 @@ const HeroContents = () => {
           position="relative"
         >
           <StyledH1 fontSize="4.5rem" padding="0 0 .5em 0" textAlign="left">
-            Trust silverfox <br /> to protect <br /> your family
+            Professional <br /> carpet cleaning <br />
+            and pest control
           </StyledH1>
           <StyledButton
             padding="1em 2em"
