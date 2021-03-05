@@ -46,13 +46,18 @@ const FullWithImage = () => {
         flexDirection="column"
         height="auto"
         alignItems="center"
-        otherCss="z-index:1;"
+        otherCss="z-index:1; h3{letter-spacing:0.1em;}"
       >
         <ImageContainer>
           <img src="./images/fox.png" />
         </ImageContainer>
-        <StyledH3 fontWeight="800" color="white" margin="50px 0 0 0">
-          We Guarantee to Keep Your Home
+        <StyledH3
+          fontWeight="800"
+          color="white"
+          margin="50px 0 0 0"
+          lineHeight="1.5em"
+        >
+          Trust SilverFox to Keep Your Home
           <br /> and Your Family Safe
         </StyledH3>
       </Container>
