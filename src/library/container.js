@@ -15,7 +15,7 @@ export const Container = styled.div`
   flex-direction: ${props =>
     props.flexDirection ? props.flexDirection : "row"};
   height: ${props => (props.height ? props.height : "100%")};
-  max-width: ${props => (props.maxWidth ? props.maxWidth : "1440px")};
+  max-width: ${props => (props.maxWidth ? props.maxWidth : "1200px")};
   background: ${props => (props.background ? props.background : "transparent")};
   color: ${props => (props.color ? props.color : "black")};
   display: ${props => (props.display ? props.display : "flex")};
