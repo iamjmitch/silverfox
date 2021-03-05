@@ -28,7 +28,7 @@ const StyledSection = styled.section`
     font-family: ${FONT_HEADING};
     font-size: 1rem;
     font-weight: 600;
-    text-align: left;
+    text-align: justify;
     color: ${COLORS.body};
     line-height: 1.8em;
   }
@@ -90,7 +90,7 @@ const Who = () => {
               lineHeight="1.3em"
               fontSize="1.8rem"
               padding="0 0 0 20px"
-              textAlign="left"
+              textAlign="justify"
               color={COLORS.black}
             >
               Your Local Carpet Cleaning & Pest Control Experts Since 2018

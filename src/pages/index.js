@@ -6,7 +6,8 @@ import styled from "styled-components"
 import Layout from "../components/global/layout"
 import Nav from "../components/nav/nav"
 import Hero from "../library/hero/hero"
-import Who from "../components/services/who"
+import Who from "../components/subSections/who"
+import Services from "../components/subSections/services"
 
 //--styles--
 import { COLORS } from "../styles/colors"
@@ -32,6 +33,7 @@ const IndexPage = () => {
       <Nav links={links} />
       <Hero />
       <Who />
+      <Services />
     </Layout>
   )
 }
