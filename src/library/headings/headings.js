@@ -24,9 +24,26 @@ export const StyledH1 = styled.h1`
   -webkit-text-stroke-color: ${props =>
     props.textStrokeColor ? props.textStrokeColor : ""};
 `
-export const StyledH2 = styled.h1`
+export const StyledH2 = styled.h2`
   font-family: ${FONT_HEADING};
-  color: ${COLORS.heroText};
+  color: ${props => (props.color ? props.color : "black")};
+  font-size: ${props => (props.fontSize ? props.fontSize : "3rem")};
+  text-transform: ${props =>
+    props.textTransform ? props.textTransform : "capitalize"};
+  padding: ${props => (props.padding ? props.padding : "0")};
+  margin: ${props => (props.margin ? props.margin : "0")};
+  -webkit-text-stroke-width: ${props =>
+    props.textStrokeWidth ? props.textStrokeWidth : ""};
+  -webkit-text-stroke-color: ${props =>
+    props.textStrokeColor ? props.textStrokeColor : ""};
+`
+
+export const StyledH3 = styled.h3`
+  font-family: ${props => (props.fontFamily ? props.fontFamily : FONT_HEADING)};
+  line-height: ${props => (props.lineHeight ? props.lineHeight : "1.1em")};
+  color: ${props => (props.color ? props.color : "black")};
+  text-align: ${props => (props.textAlign ? props.textAlign : "center")};
+  font-weight: ${props => (props.fontWeight ? props.fontWeight : "300")};
   font-size: ${props => (props.fontSize ? props.fontSize : "3rem")};
   text-transform: ${props =>
     props.textTransform ? props.textTransform : "capitalize"};

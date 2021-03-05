@@ -6,9 +6,9 @@ import { Link } from "gatsby"
 //--components--
 import { StyledLink } from "../../library/link"
 import { StyledButton } from "../../library/button"
+import { Container } from "../../library/container"
 
 //--styles--
-import { Container } from "../../library/container"
 import { COLORS } from "../../styles/colors"
 import { FONT_HEADING, WEIGHT } from "../../styles/text"
 
@@ -36,14 +36,14 @@ const Nav = ({ links }) => {
       maxWidth="unset"
       background="#1b1b1b"
       padding="30px 0"
-      otherCSS={`border-bottom: 3px solid ${COLORS.orange};`}
+      otherCss={`border-bottom: 3px solid ${COLORS.orange};`}
     >
       <StyledNav width="100%" justifyContent="center" alignItems="center">
         <StyledLogo justifyContent="center" alignItems="center">
           <Container justifyContent="center" alignItems="center">
             <Container
               width="auto"
-              otherCSS="img{width:50px!important; height: 50px!important;}"
+              otherCss="img{width:50px!important; height: 50px!important;}"
               padding="0 10px 0 0"
             >
               <img src="./images/fox.png" />
@@ -66,7 +66,7 @@ const Nav = ({ links }) => {
               fontSize="1rem"
               color={COLORS.white}
               hover="grey"
-              otherCSS="border-bottom: 2px solid transparent"
+              otherCss="border-bottom: 2px solid transparent"
               hoverBorderBottom={`2px solid ${COLORS.orange}`}
             >
               {link.text}

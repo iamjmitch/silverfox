@@ -24,5 +24,5 @@ export const Container = styled.div`
   justify-content: ${props =>
     props.justifyContent ? props.justifyContent : "center"};
   align-items: ${props => (props.alignItems ? props.alignItems : "flex-start")};
-  ${props => (props.otherCSS ? props.otherCSS : "")}
+  ${props => (props.otherCss ? props.otherCss : "")}
 `

@@ -18,7 +18,7 @@ export const StyledLink = styled(props => <Link {...props} />)`
   color: ${props => (props.color ? props.color : "black")};
   font-size: ${props => (props.fontSize ? props.fontSize : "1rem")};
   transition: ${props => (props.transition ? props.transition : "0.5s")};
-  ${props => (props.otherCSS ? props.otherCSS : "")};
+  ${props => (props.otherCss ? props.otherCss : "")};
 
   &:hover {
     color: ${props => (props.hover ? props.hover : "black")};

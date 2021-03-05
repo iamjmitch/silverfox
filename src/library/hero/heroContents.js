@@ -61,7 +61,7 @@ const HeroContents = () => {
           justifyContent="flex-end"
           position="relative"
           width="auto"
-          otherCSS="svg{height:100%; width:auto;} svg.number{position:absolute; width: 60%; height:auto; bottom: 100px; right: 20px;}"
+          otherCss="svg{height:100%; width:auto;} svg.number{position:absolute; width: 60%; height:auto; bottom: 100px; right: 20px;}"
         >
           <svg
             width="auto"
