@@ -41,19 +41,9 @@ const StyledATag = styled.a`
   color: ${COLORS.orange};
   font-weight: ${WEIGHT.BOLD};
   transition: 0.3s;
-  svg {
-    padding-right: 20px;
-    path {
-      transition: 0.3s;
-    }
-  }
+  padding-left: 20px;
   &:hover {
     color: ${COLORS.body};
-    svg {
-      path {
-        fill: ${COLORS.body};
-      }
-    }
   }
 `
 
@@ -72,13 +62,19 @@ const Who = () => {
         </StyledH2>
       </Container>
       <Container>
-        <Container padding="0 30px 0 0" className="whoImage">
+        <Container
+          padding="0 30px 0 0"
+          className="whoImage"
+          width="50%"
+          otherCss="img{width:100%;}"
+        >
           <img src="./images/services.jpg" />
         </Container>
         <Container
           padding="0 0 0 30px"
           className="whoText"
           flexDirection="column"
+          width="50%"
         >
           <Container
             className="textHeading"
@@ -88,7 +84,7 @@ const Who = () => {
             alignItems="center"
             padding="0 0 20px 0"
           >
-            <img src="./images/fox.png" />
+            <img src="./images/icon.svg" />
             <StyledH3
               fontWeight="700"
               lineHeight="1.3em"
@@ -110,31 +106,28 @@ const Who = () => {
             Nunc sem mi, viverra non condimentum quis, tincidunt vel odio.
             Pellentesque viverra risus et lacus vehicula, at porta quam
             fringilla. Sed ultricies varius elementum. Curabitur id ex ante.
-            Fusce convallis enim non mollis rutrum. Duis tellus felis, tincidunt
-            vel dictum ac, congue eget libero. Donec sit amet odio est.
           </p>
           <Container
             padding="20px 0 0 0"
             alignItems="center"
             className="facebook"
             justifyContent="flex-start"
-            otherCss={`svg{width:50px;}
+            otherCss={`svg{width:30px; display:block;}
            `}
           >
-            <StyledATag href="#">
-              <svg
-                width="auto"
-                height="auto"
-                viewBox="0 0 61 61"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M57.378 0.000999451H3.352C1.502 0.000999451 0 1.5 0 3.353V57.379C0 59.232 1.502 60.733 3.352 60.733H32.438V37.214H24.524V28.047H32.438V21.287C32.438 13.444 37.227 9.171 44.225 9.171C47.58 9.171 50.457 9.422 51.296 9.531V17.729L46.442 17.731C42.637 17.731 41.903 19.54 41.903 22.193V28.044H50.981L49.794 37.21H41.902V60.73H57.377C59.229 60.73 60.732 59.227 60.732 57.379V3.351C60.731 1.5 59.23 0.000999451 57.378 0.000999451Z"
-                  fill="#fe4f00"
-                />
-              </svg>
-            </StyledATag>
+            <svg
+              width="auto"
+              height="auto"
+              viewBox="0 0 61 61"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M57.378 0.000999451H3.352C1.502 0.000999451 0 1.5 0 3.353V57.379C0 59.232 1.502 60.733 3.352 60.733H32.438V37.214H24.524V28.047H32.438V21.287C32.438 13.444 37.227 9.171 44.225 9.171C47.58 9.171 50.457 9.422 51.296 9.531V17.729L46.442 17.731C42.637 17.731 41.903 19.54 41.903 22.193V28.044H50.981L49.794 37.21H41.902V60.73H57.377C59.229 60.73 60.732 59.227 60.732 57.379V3.351C60.731 1.5 59.23 0.000999451 57.378 0.000999451Z"
+                fill="#fe4f00"
+              />
+            </svg>
+
             <StyledATag href="#">Find Silverfox on Facebook</StyledATag>
           </Container>
         </Container>

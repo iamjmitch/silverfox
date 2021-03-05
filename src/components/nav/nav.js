@@ -13,7 +13,7 @@ import { COLORS } from "../../styles/colors"
 import { FONT_HEADING, WEIGHT } from "../../styles/text"
 
 const StyledNav = styled(Container)`
-  max-width: unset;
+  max-width: 1920px;
   padding: 0 50px;
 `
 const StyledLogo = styled(Container)`
