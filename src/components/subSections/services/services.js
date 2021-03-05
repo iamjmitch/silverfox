@@ -3,13 +3,17 @@ import React from "react"
 import styled from "styled-components"
 
 //--components--
-import { Container } from "../../library/container"
-import { StyledH1, StyledH2, StyledH3 } from "../../library/headings/headings"
+import { Container } from "../../../library/container"
+import {
+  StyledH1,
+  StyledH2,
+  StyledH3,
+} from "../../../library/headings/headings"
 import Card from "./servicesStyledCard"
 
 //--styles--
-import { COLORS } from "../../styles/colors"
-import { FONT_HEADING, FONT_BODY, WEIGHT } from "../../styles/text"
+import { COLORS } from "../../../styles/colors"
+import { FONT_HEADING, FONT_BODY, WEIGHT } from "../../../styles/text"
 
 //--styled-components
 const StyledSection = styled.section`

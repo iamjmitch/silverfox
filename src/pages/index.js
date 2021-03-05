@@ -7,7 +7,7 @@ import Layout from "../components/global/layout"
 import Nav from "../components/nav/nav"
 import Hero from "../library/hero/hero"
 import Who from "../components/subSections/who"
-import Services from "../components/subSections/services"
+import Services from "../components/subSections/services/services"
 
 //--styles--
 import { COLORS } from "../styles/colors"

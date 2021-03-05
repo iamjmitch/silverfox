@@ -4,11 +4,11 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 //--components--
-import { Container } from "../../library/container"
+import { Container } from "../../../library/container"
 
 //--styles--
-import { COLORS } from "../../styles/colors"
-import { FONT_HEADING, FONT_BODY, WEIGHT } from "../../styles/text"
+import { COLORS } from "../../../styles/colors"
+import { FONT_HEADING, FONT_BODY, WEIGHT } from "../../../styles/text"
 
 //--styled-components
 
