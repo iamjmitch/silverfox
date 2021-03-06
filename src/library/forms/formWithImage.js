@@ -21,6 +21,26 @@ const StyledFormContainer = styled(Container)`
 
 const FormContainer = styled.div`
   width: 70%;
+  padding: 0px 30px;
+  div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    input,
+    select,
+    textarea {
+      border: none;
+      border-bottom: 1px solid ${COLORS.grey};
+      padding: 5px 0;
+      font-size: 1rem;
+    }
+    label {
+      color: ${COLORS.orange};
+      font-weight: 500;
+      font-size: 1rem;
+      padding-bottom: 5px;
+    }
+  }
 `
 
 const StyledForm = styled.form``
@@ -107,6 +127,26 @@ const FormWithImage = () => {
           <div>
             <label htmlFor="phone">Phone</label>
             <input type="phone" name="phone" id="phone" />
+          </div>
+          <div>
+            <label htmlFor="service">Service Required</label>
+            <select name="service" id="service">
+              <option value="Carpet_Cleaning">Carpet Cleaning</option>
+              <option value="Pest_Control">Pest Control</option>
+              <option value="Both">Carpet Cleaning & Pest Control</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="date">Date</label>
+            <input type="date" name="date" id="date" />
+          </div>
+          <div>
+            <label htmlFor="time">Time</label>
+            <select name="time" id="time">
+              <option value="Morning">Morning</option>
+              <option value="Afternoon">Afternoon</option>
+              <option value="no_preference">No Preference</option>
+            </select>
           </div>
           <div style={{ position: "relative" }}>
             <label htmlFor="message">Message*</label>
