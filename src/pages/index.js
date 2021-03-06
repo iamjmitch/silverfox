@@ -8,7 +8,8 @@ import Nav from "../components/nav/nav"
 import Hero from "../library/hero/hero"
 import Who from "../components/subSections/who"
 import Services from "../components/subSections/services/services"
-import FullWithImage from "../components/subSections/fullWidthImage"
+import FullWidthImageWithTextNoButton from "../library/fullWidthImages/FullWidthImageWithTextNoButton"
+import FormWithImage from "../library/forms/formWithImage"
 
 //--styles--
 import { COLORS } from "../styles/colors"
@@ -35,7 +36,8 @@ const IndexPage = () => {
       <Hero />
       <Who />
       <Services />
-      <FullWithImage />
+      <FullWidthImageWithTextNoButton />
+      <FormWithImage />
     </Layout>
   )
 }

@@ -3,8 +3,8 @@ import React from "react"
 import styled from "styled-components"
 
 //--components--
-import { Container } from "../../library/container"
-import { StyledH3 } from "../../library/headings/headings"
+import { Container } from "../container"
+import { StyledH3 } from "../headings/headings"
 
 //--styles--
 import { COLORS } from "../../styles/colors"
@@ -17,11 +17,9 @@ const StyledContainer = styled(Container)`
   background-position: center;
   background-attachment: fixed;
   margin-top: 100px;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000;
-  box-shadow: 5px 5px 15px 5px #000000;
+  z-index: -1;
 `
 const ImageContainer = styled(Container)`
-  margin-top: 100px;
   img {
     width: 110px;
     background: white;
@@ -34,20 +32,19 @@ const StyledSpan = styled.span`
   height: 100%;
   position: absolute;
   background: #0000004a;
-  z-index: ;
+  z-index: 1;
 `
 
-const FullWithImage = () => {
+const FullWidthImageWithTextNoButton = () => {
   return (
-    <StyledContainer width="100%" height="80vh" position="relative">
+    <StyledContainer width="100%" height="60vh" position="relative">
       <StyledSpan />
       <Container
         flexDirection="column"
-        height="auto"
         alignItems="center"
         otherCss="z-index:1; h3{letter-spacing:0.1em;}"
       >
-        <ImageContainer>
+        <ImageContainer height="auto">
           <img src="./images/fox.png" />
         </ImageContainer>
         <StyledH3
@@ -64,4 +61,4 @@ const FullWithImage = () => {
   )
 }
 
-export default FullWithImage
+export default FullWidthImageWithTextNoButton
