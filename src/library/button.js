@@ -8,6 +8,7 @@ import { FONT_HEADING, WEIGHT } from "../styles/text"
 
 export const StyledButton = styled.button`
   cursor: pointer;
+  width: ${props => (props.width ? props.width : "auto")};
   padding: ${props => (props.padding ? props.padding : "0")};
   font-family: ${props => (props.fontFamily ? props.fontFamily : FONT_HEADING)};
   text-decoration: ${props =>

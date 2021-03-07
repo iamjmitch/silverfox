@@ -5,6 +5,7 @@ import styled from "styled-components"
 //--components--
 import { Container } from "../container"
 import { StyledH3 } from "../headings/headings"
+import { StyledButton } from "../button"
 
 //--styles--
 import { COLORS } from "../../styles/colors"
@@ -22,28 +23,42 @@ const StyledFormContainer = styled(Container)`
 const FormContainer = styled.div`
   width: 70%;
   padding: 0px 30px;
-  div {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    input,
-    select,
-    textarea {
-      border: none;
-      border-bottom: 1px solid ${COLORS.grey};
-      padding: 5px 0;
-      font-size: 1rem;
-    }
-    label {
-      color: ${COLORS.orange};
-      font-weight: 500;
-      font-size: 1rem;
-      padding-bottom: 5px;
-    }
+`
+
+const InputContainer = styled(Container)`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid ${COLORS.grey};
+    padding: 5px 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-transform: unset;
+  }
+  input {
+    padding: 3px;
+  }
+  label {
+    color: ${COLORS.orange};
+    font-weight: 500;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    padding-left: 3px;
   }
 `
 
 const StyledForm = styled.form``
+
+const FormLine = styled(Container)`
+  flex-direction: row;
+`
 
 const FormWithImage = () => {
   const [formText, setFormText] = useState("SEND")
@@ -105,6 +120,14 @@ const FormWithImage = () => {
   return (
     <StyledFormContainer>
       <FormContainer>
+        <StyledH3
+          fontSize="1.5rem"
+          weight={WEIGHT.NORMAL}
+          textAlign="left"
+          padding="0 0 20px 10px"
+        >
+          Get a Free Quote
+        </StyledH3>
         <StyledForm
           method="post"
           netlify-honeypot="bot-field"
@@ -116,42 +139,49 @@ const FormWithImage = () => {
         >
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
-          <div>
-            <label htmlFor="name">Name*</label>
-            <input type="text" name="name" id="name" required />
-          </div>
-          <div>
-            <label htmlFor="email">Email*</label>
-            <input type="email" name="email" id="email" required />
-          </div>
-          <div>
-            <label htmlFor="phone">Phone</label>
-            <input type="phone" name="phone" id="phone" />
-          </div>
-          <div>
-            <label htmlFor="service">Service Required</label>
-            <select name="service" id="service">
-              <option value="Carpet_Cleaning">Carpet Cleaning</option>
-              <option value="Pest_Control">Pest Control</option>
-              <option value="Both">Carpet Cleaning & Pest Control</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="date">Date</label>
-            <input type="date" name="date" id="date" />
-          </div>
-          <div>
-            <label htmlFor="time">Time</label>
-            <select name="time" id="time">
-              <option value="Morning">Morning</option>
-              <option value="Afternoon">Afternoon</option>
-              <option value="no_preference">No Preference</option>
-            </select>
-          </div>
-          <div style={{ position: "relative" }}>
-            <label htmlFor="message">Message*</label>
+          <FormLine>
+            <InputContainer>
+              <label htmlFor="name">Name</label>
+              <input type="text" name="name" id="name" required />
+            </InputContainer>
+            <InputContainer>
+              <label htmlFor="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </InputContainer>
+          </FormLine>
+          <FormLine>
+            <InputContainer>
+              <label htmlFor="phone">Phone</label>
+              <input type="phone" name="phone" id="phone" required />
+            </InputContainer>
+            <InputContainer>
+              <label htmlFor="service">Service Required</label>
+              <select name="service" id="service">
+                <option value="Carpet_Cleaning">Carpet Cleaning</option>
+                <option value="Pest_Control">Pest Control</option>
+                <option value="Both">Carpet Cleaning & Pest Control</option>
+              </select>
+            </InputContainer>
+          </FormLine>
+          <FormLine>
+            <InputContainer>
+              <label htmlFor="date">Date</label>
+              <input type="date" name="date" id="date" required />
+            </InputContainer>
+            <InputContainer>
+              <label htmlFor="time">Time</label>
+              <select name="time" id="time" required>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="no_preference">No Preference</option>
+              </select>
+            </InputContainer>
+          </FormLine>
+
+          <InputContainer>
+            <label htmlFor="message">Message</label>
             <textarea name="message" rows="10" id="message" required></textarea>
-          </div>
+          </InputContainer>
           <ul className="actions">
             {isBot && (
               <li>
@@ -168,9 +198,17 @@ const FormWithImage = () => {
               </li>
             )}
             <li>
-              <button type="submit" className="button">
+              <StyledButton
+                type="submit"
+                className="button"
+                background={COLORS.orange}
+                padding="20px 50px"
+                color={COLORS.white}
+                weight="500"
+                hoverBackground={COLORS.grey}
+              >
                 {formText}
-              </button>
+              </StyledButton>
             </li>
           </ul>
         </StyledForm>

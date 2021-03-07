@@ -9,5 +9,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family:${FONT_HEADING}
       }
+      ul{
+        list-style-type:none;
+        padding-inline-start: 10px;
+      }
 `
 export default GlobalStyle

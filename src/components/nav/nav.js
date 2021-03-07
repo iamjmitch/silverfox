@@ -34,7 +34,7 @@ const Nav = ({ links }) => {
     <Container
       width="100%"
       maxWidth="unset"
-      background="#1b1b1b"
+      background="#292929"
       padding="30px 0"
       otherCss={`border-bottom: 3px solid ${COLORS.orange};`}
     >
