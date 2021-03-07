@@ -88,7 +88,13 @@ const FormWithImage = () => {
           setTimeout(function () {
             setFormText("MESSAGE SENT")
           }, 2000)
-          contactForm.reset()
+
+          setTimeout(function () {
+            setIsBot(false)
+          }, 7000)
+          setTimeout(function () {
+            contactForm.reset()
+          }, 7000)
           setTimeout(function () {
             setFormText("SEND")
           }, 7000)
@@ -185,11 +191,16 @@ const FormWithImage = () => {
           <ul className="actions">
             {isBot && (
               <li>
-                <Container style={{ background: "transparent" }}>
+                <Container
+                  background="transparent"
+                  justifyContent="flex-start"
+                  padding="0 0 10px 0"
+                >
                   <img
                     style={{
                       width: "63px",
                       paddingBottom: "5px",
+                      marginRight: "5px",
                     }}
                     src="./images/captcha.png"
                   />
