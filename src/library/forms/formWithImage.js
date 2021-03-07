@@ -46,7 +46,7 @@ const InputContainer = styled(Container)`
     font-size: 1rem;
     box-sizing: border-box;
     text-transform: unset;
-    background: #80808021;
+    background: #8080801f;
   }
 
   label {
