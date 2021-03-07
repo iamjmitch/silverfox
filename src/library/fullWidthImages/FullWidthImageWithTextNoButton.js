@@ -11,6 +11,7 @@ import { COLORS } from "../../styles/colors"
 
 //--styled-components
 const StyledContainer = styled(Container)`
+  min-height: 470px;
   background: url(./images/fpi.jpg);
   max-width: 100%;
   background-size: cover;
@@ -22,9 +23,6 @@ const StyledContainer = styled(Container)`
 const ImageContainer = styled(Container)`
   img {
     width: 110px;
-    background: white;
-    border-radius: 50%;
-    background: ${COLORS.white};
   }
 `
 const StyledSpan = styled.span`
@@ -45,7 +43,7 @@ const FullWidthImageWithTextNoButton = () => {
         otherCss="z-index:1; h3{letter-spacing:0.1em;}"
       >
         <ImageContainer height="auto">
-          <img src="./images/fox.png" />
+          <img src="./images/foxsolid.png" />
         </ImageContainer>
         <StyledH3
           fontWeight="800"

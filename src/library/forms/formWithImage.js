@@ -14,37 +14,41 @@ import { FONT_BODY, FONT_HEADING, WEIGHT } from "../../styles/text"
 //--styled-components
 const StyledFormContainer = styled(Container)`
   background: white;
-  padding-top: 200px;
+  margin-top: -50px;
   z-index: 100;
-  border-radius: 20px;
+
   overflow: hidden;
+  margin-bottom: 540px;
+  border: 1px solid #e6e6e6;
+  -webkit-box-shadow: 3px 3px 11px 0px #00000047;
+  box-shadow: 3px 3px 11px 0px #00000047;
+  align-items: stretch;
 `
 
 const FormContainer = styled.div`
   width: 70%;
-  padding: 0px 30px;
+  padding: 0px 50px;
 `
 
 const InputContainer = styled(Container)`
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px 10px;
+  padding: 8px 10px;
   box-sizing: border-box;
   input,
   select,
   textarea {
     width: 100%;
     border: none;
-    border-bottom: 1px solid ${COLORS.grey};
-    padding: 5px 0;
+    border-radius: 5px;
+    padding: 10px;
     font-size: 1rem;
     box-sizing: border-box;
     text-transform: unset;
+    background: #80808021;
   }
-  input {
-    padding: 3px;
-  }
+
   label {
     color: ${COLORS.orange};
     font-weight: 500;
@@ -128,9 +132,9 @@ const FormWithImage = () => {
       <FormContainer>
         <StyledH3
           fontSize="1.5rem"
-          weight={WEIGHT.NORMAL}
+          weight="600"
           textAlign="left"
-          padding="0 0 20px 10px"
+          padding="100px 0 25px 12px"
         >
           Get a Free Quote
         </StyledH3>
@@ -194,7 +198,7 @@ const FormWithImage = () => {
                 <Container
                   background="transparent"
                   justifyContent="flex-start"
-                  padding="0 0 10px 0"
+                  padding="10px 0 0 0"
                 >
                   <img
                     style={{
@@ -214,6 +218,7 @@ const FormWithImage = () => {
                 className="button"
                 background={COLORS.orange}
                 padding="20px 50px"
+                margin="10px 0 20px 0"
                 color={COLORS.white}
                 weight="500"
                 hoverBackground={COLORS.grey}
@@ -224,15 +229,18 @@ const FormWithImage = () => {
           </ul>
         </StyledForm>
       </FormContainer>
+
       <Container
         width="30%"
         flexDirection="column"
-        otherCss="img{width: 100%; border-top-right-radius:20px;}"
+        otherCss="img{width: 100%; }"
+        height="unset"
       >
         <img src="./images/contact.jpg" />
         <Container
           background={COLORS.orange}
-          padding="30px 25px"
+          alignItems="center"
+          padding="0 20px"
           otherCss="color:white; font-size:1.2rem;font-weight:500; box-sizing:border-box; text-align:center;"
         >
           SilverFox is trusted by over 200+ Customers

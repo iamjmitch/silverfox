@@ -43,7 +43,7 @@ export const StyledH3 = styled.h3`
   line-height: ${props => (props.lineHeight ? props.lineHeight : "1.1em")};
   color: ${props => (props.color ? props.color : "black")};
   text-align: ${props => (props.textAlign ? props.textAlign : "center")};
-  font-weight: ${props => (props.fontWeight ? props.fontWeight : "300")};
+  font-weight: ${props => (props.weight ? props.weight : "300")};
   font-size: ${props => (props.fontSize ? props.fontSize : "3rem")};
   text-transform: ${props =>
     props.textTransform ? props.textTransform : "capitalize"};

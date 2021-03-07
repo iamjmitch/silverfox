@@ -12,6 +12,11 @@ const GlobalStyle = createGlobalStyle`
       ul{
         list-style-type:none;
         padding-inline-start: 10px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+       margin-inline-start: 0;
+       margin-inline-end: 0;
+    
       }
 `
 export default GlobalStyle

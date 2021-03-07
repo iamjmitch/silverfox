@@ -10,6 +10,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
   width: ${props => (props.width ? props.width : "auto")};
   padding: ${props => (props.padding ? props.padding : "0")};
+  margin: ${props => (props.margin ? props.margin : "0")};
   font-family: ${props => (props.fontFamily ? props.fontFamily : FONT_HEADING)};
   text-decoration: ${props =>
     props.textDecoration ? props.textDecoration : "none"};
